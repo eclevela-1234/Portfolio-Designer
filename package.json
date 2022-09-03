@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/eclevela-1234/portfolio-designer-2#readme",
   "dependencies": {
+    "axios": "^0.27.2",
     "bcrypt": "^5.0.1",
     "connect-session-sequelize": "^7.1.5",
     "dotenv": "^16.0.2",
