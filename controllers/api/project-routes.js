@@ -15,8 +15,8 @@ router.get("/:username", (req, res) => {
     .then((data) => {
       if (!data) {
         Axios.get(`https://gh-pinned-repos.egoist.sh/?username=${req.params.username}`)
-        .then(res => {
-            console.log(res.data);
+        .then(r => {
+            res.send(r.data)
         })
       }
     })
