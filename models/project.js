@@ -42,10 +42,6 @@ Project.init(
       primaryKey: true,
       autoIncrement: true
     },
-    owner: {
-      type: DataTypes.STRING,
-      allowNull: false
-    },
     repo: {
       type: DataTypes.STRING,
       allowNull: false
@@ -73,11 +69,11 @@ Project.init(
        type: DataTypes.INTEGER,
        allowNull: true
      },
-     user_id: {
-       type: DataTypes.INTEGER,
+     owner: {
+       type: DataTypes.STRING,
        references: {
          model: 'user',
-         key: 'id'
+         key: 'username'
        }
      }
   },
