@@ -26,4 +26,20 @@ router.get("/:username", (req, res) => {
     });
 });
 
+router.post('/', (req, res) => {
+  Project.create({
+    owner: req.body.owner,
+    repo: req.body.repo,
+    link: req.body.link,
+    language: req.body.language,
+    languageColor: req.body.languageColor,
+    stars: req.body.stars,
+  })
+  .then(dbProjectData => res.json(dbProjectData))
+  .catch(err => {
+    console.log(err);
+    res.status(500).json(err);
+  })
+})
+
 module.exports = router;

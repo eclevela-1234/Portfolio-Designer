@@ -42,6 +42,10 @@ Project.init(
       primaryKey: true,
       autoIncrement: true
     },
+    owner: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
     repo: {
       type: DataTypes.STRING,
       allowNull: false
