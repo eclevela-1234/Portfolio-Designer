@@ -27,16 +27,20 @@ router.get("/", (req, res) => {
 });
 
 router.get("/:username", (req, res) => {
-  User.findOne({
+  Project.findAll({
     where: {
-      username: req.params.username,
-    },
-    include: [{ model: Project }],
+      owner: req.params.username,
+    }
+    // include: [{ model: Project }],
   })
     .then((data) => {
       if (!data) {
         res.redirect("/login");
       }
+
+      const projects = data.map((project) => project.get({plain: true}));
+      res.send(projects);
+    //   res.render("portfolio", {projects});
     })
     .catch((err) => {
       console.log(err);
