@@ -1,7 +1,9 @@
+<h2>{{projects.owner}}</h2>
 <ol class="post-list">
-  {{#each users as |user|}}
+  <img src="https://via.placeholder.com/150" alt="profile-img">
+  {{#each projects as |project|}}
   <li>
-    {{> user-info user }}
+    {{> project-info project }}
   </li>
   {{/each}}
 </ol>

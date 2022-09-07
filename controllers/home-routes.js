@@ -39,8 +39,8 @@ router.get("/:username", (req, res) => {
       }
 
       const projects = data.map((project) => project.get({plain: true}));
-      res.send(projects);
-    //   res.render("portfolio", {projects});
+    //   res.send(projects);
+      res.render("portfolio", {projects});
     })
     .catch((err) => {
       console.log(err);
