@@ -14,8 +14,6 @@ router.get("/:username", (req, res) => {
   })
     .then((data) => {
       if (!data) {
-        let password = window.prompt("You have not created a user profile. Please enter a password:");
-        console.log(password);
         Axios.get(`https://gh-pinned-repos.egoist.sh/?username=${req.params.username}`)
         .then(r => {
             res.send(r.data)
