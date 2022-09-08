@@ -1,6 +1,10 @@
-<h2>{{projects.owner}}</h2>
+
+<img style="width: 200px" src="https://github.com/{{projects.[0].owner}}.png" alt="profile-img">
+
+<h2>{{projects.[0].owner}}</h2>
+
 <ol class="post-list">
-  <img src="https://via.placeholder.com/150" alt="profile-img">
+  
   {{#each projects as |project|}}
   <li>
     {{> project-info project }}
