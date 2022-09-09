@@ -1,5 +1,5 @@
 <section>
-  <h2>Create New Post</h2>
+  <h2 class="has-text-weight-bold is-size-4">Create New Post</h2>
 
   <form class="new-post-form">
     <div>
@@ -10,13 +10,13 @@
       <label for="post-url">Link</label>
       <input id="post-url" name="post-url" />
     </div>
-    <button type="submit" class="btn">Create</button>
+    <button type="submit" class="btn, button is-warning is-rounded">Create</button>
   </form>
 </section>
 
 {{#if projects.length}}
 <section>
-  <h2>Your Projects</h2>
+  <h2 class="has-text-weight-bold is-size-4">Your Projects</h2>
   <ol>
     {{#each projects as |project|}}
     <li>
