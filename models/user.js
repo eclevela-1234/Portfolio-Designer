@@ -24,6 +24,21 @@ User.init(
       // primaryKey: true,
       unique: true,
     },
+    name: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    bio: {
+      type: DataTypes.STRING,
+      allowNull: true
+    },
+    social: {
+      type: DataTypes.STRING,
+      allowNull: true,
+      validate: {
+        isUrl: true
+      }
+    },
     email: {
       type: DataTypes.STRING,
       allowNull: false,
