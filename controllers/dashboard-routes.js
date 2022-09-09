@@ -13,7 +13,7 @@ router.get("/", withAuth, (req, res) => {
   console.log(req.session);
   Project.findAll({
       where: {
-          user_id: req.session.user_id
+          owner: req.session.username
       },
     // //Query configuration
     // attributes: [
@@ -44,9 +44,9 @@ router.get("/", withAuth, (req, res) => {
     //   },
     // ],
   })
-    .then((dbPostData) => {
-      const posts = dbPostData.map((post) => post.get({ plain: true }));
-      res.render('dashboard');
+    .then((dbProjectData) => {
+      const projects = dbProjectData.map((post) => post.get({ plain: true }));
+      res.render('dashboard', { projects, loggedIn: req.session.loggedIn });
       // res.render("dashboard", { posts, loggedIn: true });
     })
     .catch((err) => {
