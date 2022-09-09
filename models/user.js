@@ -13,10 +13,15 @@ class User extends Model {
 // create fields/columns for User model
 User.init(
   {
+    id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      primaryKey: true,
+      autoIncrement: true,},
     username: {
       type: DataTypes.STRING,
       allowNull: false,
-      primaryKey: true,
+      // primaryKey: true,
       unique: true,
     },
     email: {
