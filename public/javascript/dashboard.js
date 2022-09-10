@@ -1,5 +1,5 @@
-async function updateHandler(event) {
-  event.preventDefault();
+const updateHandler = async function (event) {
+//   event.preventDefault();
   const bio = document.querySelector("#bio-form").value.trim();
   const social = document.querySelector("#social-url").value.trim();
 
@@ -18,5 +18,6 @@ async function updateHandler(event) {
     alert(response.statusText);
   }
 }
+
 
 document.querySelector("#update", updateHandler);

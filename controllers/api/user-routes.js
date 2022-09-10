@@ -39,6 +39,7 @@ router.post("/", (req, res) => {
 router.post("/login", (req, res) => {
   // expects {email: 'lernantino@gmail.com', password: 'password1234'}
   User.findOne({
+    individualHooks: true,
     where: {
       email: req.body.email,
     },
@@ -81,7 +82,10 @@ router.post("/logout", withAuth, (req, res) => {
 });
 
 router.put("/update", withAuth, (req, res) => {
+  console.log("Session Username: ", req.session.username)
   User.update(
+
+   
     { bio: req.body.bio },
     {
       where: {
@@ -90,10 +94,12 @@ router.put("/update", withAuth, (req, res) => {
     }
   )
     .then((dbPostData) => {
+      console.log("BioInfo:", dbPostData)
       if (!dbPostData) {
         res.status(404).json({ message: "No user found with this id!" });
         return;
       }
+    
       res.json(dbPostData);
     })
     .catch((err) => {
