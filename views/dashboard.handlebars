@@ -6,16 +6,28 @@
   <form class="new-post-form">
     <div>
       <label for="bio">Bio</label>
-      <textarea rows="10" cols="50" id="post-title" name="bio">{{bio}}</textarea>
+      <textarea rows="10" cols="50" id="bio-form" name="bio">{{userInfo.[0].bio}}</textarea>
     </div>
     <div>
-      <label for="social">Social</label>
-      <input id="post-url" name="social" />
+      <label for="social">Social Link</label>
+      <input id="social-url" name="social" value="{{userInfo.[0].social}}"/>
     </div>
 
-    <button type="submit" class="btn, button is-warning is-rounded">Update</button>
+    <button id="update type="submit" class="btn, button is-warning is-rounded">Update</button>
+
 
   </form>
+</section>
+
+<section>
+  <h2>Current Pinned Repos</h2>
+<ul class="post-list">
+  {{#each project.repos as |repo|}}
+  <li>
+    {{> user-info user }}
+  </li>
+  {{/each}}
+</ul>
 </section>
 
 {{!-- {{#if projects.length}}
