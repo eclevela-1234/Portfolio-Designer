@@ -18,6 +18,8 @@ router.get("/:username", (req, res) => {
         .then(r => {
             res.send(r.data)
         })
+      } else {
+        res.send(data)
       }
     })
     .catch((err) => {

@@ -6,9 +6,7 @@ const { Project, User } = require("../models");
 router.get("/", (req, res) => {
   console.log("======================");
   User.findAll({
-    attributes: [
-      "username",
-      "email",]
+    attributes: ["username", "email"],
     //   { exclude: ['password'] }],
     // include: [{ model: Project }],
   })
@@ -17,7 +15,7 @@ router.get("/", (req, res) => {
 
       res.render("homepage", {
         users,
-        // loggedIn: req.session.loggedIn,
+        loggedIn: req.session.loggedIn,
       });
     })
     .catch((err) => {
@@ -27,25 +25,28 @@ router.get("/", (req, res) => {
 });
 
 router.get("/login", (req, res) => {
-    res.render("login");
-}
-)
+  if (req.session.loggedIn) {
+    res.redirect("/");
+    return;
+  }
+  res.render("login");
+});
 
 router.get("/:username", (req, res) => {
   Project.findAll({
     where: {
       owner: req.params.username,
-    }
+    },
     // include: [{ model: Project }],
   })
     .then((data) => {
-      if (!data) {
+      if (!data.length) {
         res.redirect("/login");
       }
 
-      const projects = data.map((project) => project.get({plain: true}));
-    //   res.send(projects);
-      res.render("portfolio", {projects});
+      const projects = data.map((project) => project.get({ plain: true }));
+      //   res.send(projects);
+      res.render("portfolio", { projects, loggedIn: req.session.loggedIn });
     })
     .catch((err) => {
       console.log(err);
