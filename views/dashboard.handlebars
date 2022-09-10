@@ -4,13 +4,13 @@
   <form class="new-post-form">
     <div>
       <label for="bio">Bio</label>
-      <textarea rows="10" cols="50" id="post-title" name="bio">{{userInfo.[0].bio}}</textarea>
+      <textarea rows="10" cols="50" id="bio-form" name="bio">{{userInfo.[0].bio}}</textarea>
     </div>
     <div>
       <label for="social">Social Link</label>
-      <input id="post-url" name="social" value="{{userInfo.[0].social}}"/>
+      <input id="social-url" name="social" value="{{userInfo.[0].social}}"/>
     </div>
-    <button type="submit" class="btn">Update</button>
+    <button id="update" type="submit" class="btn">Update</button>
   </form>
 </section>
 
