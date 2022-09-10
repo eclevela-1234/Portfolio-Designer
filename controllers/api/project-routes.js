@@ -42,4 +42,44 @@ router.post('/', (req, res) => {
   })
 })
 
+// FOR A GIVEN USERNAME, fetch the data from the API, Update db data.
+router.post("/update", async (req, res) => {
+  const axiosResponse = await Axios.get(
+    // hardcoded username param
+    `https://gh-pinned-repos.egoist.sh/?username=danielcnow`
+  );
+  const projects = axiosResponse.data;
+console.log(await User.findAll())
+  const statements = [];
+// hardcoded username param
+// destroys project upon post /update query
+ Project.destroy({where:
+  {owner: "danielcnow"} 
+})
+// for loop to create
+  for (let i = 0; i < projects.length; i++) {
+    projectdata = projects[i]
+    statements.push(
+    Project.create(
+      {
+        owner: projectdata.owner ?? "",
+        link: projectdata.link ?? "http://www.google.com/",
+        language: projectdata.language ?? "",
+        languageColor: projectdata.languageColor ?? "",
+        stars: projectdata.stars ?? 0,
+        forks: projectdata.forks ?? 0,
+        image: projectdata.image ?? "",
+        repo: projectdata.repo ?? "",
+        description: projectdata.description ?? "n/a",
+      }
+
+    ));
+  }
+  const result = await Promise.all(statements);
+ const projState = Project.findAll();
+console.log(projState);
+  return res.send(200);
+});
+// end
+
 module.exports = router;
