@@ -5,9 +5,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio-Designer</title>
-  {{!-- 3rd party stylesheet --}}
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
   <link rel="stylesheet" href="/stylesheets/style.css">
   
+
 </head>
 
 <body>
@@ -19,13 +21,13 @@
       <nav>
         {{#if loggedIn}}
         <a href="/dashboard">dashboard</a>
-        <button id="logout" class="btn-no-style">logout</button>
+        <button id="logout" class="btn-no-style, button is-danger is-rounded">logout</button>
         {{else}}
         <a href="/login">login</a>
         {{/if}}
       </nav>
     </header>
-    <main>
+    <main class="has-background-info-light">
       {{{ body }}}
     </main>
     <footer>
