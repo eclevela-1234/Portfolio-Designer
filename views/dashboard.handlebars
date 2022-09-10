@@ -1,5 +1,7 @@
 <section>
-  <h2>Update your info</h2>
+
+  <h2 class="has-text-weight-bold is-size-4">Update your info</h2>
+
 
   <form class="new-post-form">
     <div>
@@ -10,7 +12,10 @@
       <label for="social">Social Link</label>
       <input id="social-url" name="social" value="{{userInfo.[0].social}}"/>
     </div>
-    <button id="update" type="submit" class="btn">Update</button>
+
+    <button id="update type="submit" class="btn, button is-warning is-rounded">Update</button>
+
+
   </form>
 </section>
 
@@ -27,7 +32,7 @@
 
 {{!-- {{#if projects.length}}
 <section>
-  <h2>Your Projects</h2>
+  <h2 class="has-text-weight-bold is-size-4">Your Projects</h2>
   <ol>
     {{#each projects as |project|}}
     <li>
