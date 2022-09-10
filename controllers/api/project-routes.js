@@ -5,28 +5,28 @@ const { Project, User } = require("../../models");
 const Axios = require('axios');
 
 // Check if user exists in database and display projects
-router.get("/:username", (req, res) => {
-  User.findOne({
-    where: {
-      username: req.params.username,
-    },
-    include: [{ model: Project }],
-  })
-    .then((data) => {
-      if (!data) {
-        Axios.get(`https://gh-pinned-repos.egoist.sh/?username=${req.params.username}`)
-        .then(r => {
-            res.send(r.data)
-        })
-      } else {
-        res.send(data)
-      }
-    })
-    .catch((err) => {
-      console.log(err);
-      res.status(500).json(err);
-    });
-});
+// router.get("/:username", (req, res) => {
+//   User.findOne({
+//     where: {
+//       username: req.params.username,
+//     },
+//     include: [{ model: Project }],
+//   })
+//     .then((data) => {
+//       if (!data) {
+//         Axios.get(`https://gh-pinned-repos.egoist.sh/?username=${req.params.username}`)
+//         .then(r => {
+//             res.send(r.data)
+//         })
+//       } else {
+//         res.send(data)
+//       }
+//     })
+//     .catch((err) => {
+//       console.log(err);
+//       res.status(500).json(err);
+//     });
+// });
 
 router.post('/', (req, res) => {
   Project.create({

@@ -11,9 +11,9 @@ const withAuth = require('../utils/auth');
 
 router.get("/", withAuth, (req, res) => {
   console.log(req.session);
-  Project.findAll({
+  User.findAll({
       where: {
-          owner: req.session.username
+          username: req.session.username
       },
     // //Query configuration
     // attributes: [
@@ -45,8 +45,9 @@ router.get("/", withAuth, (req, res) => {
     // ],
   })
     .then((dbProjectData) => {
-      const projects = dbProjectData.map((post) => post.get({ plain: true }));
-      res.render('dashboard', { projects, loggedIn: req.session.loggedIn });
+      const userInfo = dbProjectData.map((post) => post.get({ plain: true }));
+      // res.send(userInfo);
+      res.render('dashboard', { userInfo, loggedIn: req.session.loggedIn });
       // res.render("dashboard", { posts, loggedIn: true });
     })
     .catch((err) => {
