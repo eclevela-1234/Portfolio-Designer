@@ -3,32 +3,26 @@ Portfolio Designer is an interactive full stack application that loads and forma
 The user can log in to Profile Designer & have all of their pinned repos appear upon logging in & can even search for other users by using their GitHub profile name. 
 
 
-Original Repo Link
+**Original Repo Link**
 
 https://github.com/easmsm/portfolio-designer
 
-Updated Repo Link
+**Updated Repo Link**
 
 https://github.com/eclevela-1234/portfolio-designer-2
 
 
-Collaboration Credits
+**Collaboration Credits**
 
-Eliot Cleveland
-Emily Kukwa
-Taylor Johnson
-Savannah Whittenburg
-Daniel Chow
+Eliot Cleveland, Emily Kukwa, Taylor Johnson, Savannah Whittenburg, Daniel Chow
 
 
+**Contribution Guidelines**
 
-Contribution Guidelines
-
-Those who wish to contribute may create issues and submit pull requests.
-
+*Those who wish to contribute may create issues and submit pull requests.*
 
 
-Copyright (c) 2022 by Team-Steed
+Copyright **(c)** 2022 by **Team-Steed**
 
 MIT License
 
