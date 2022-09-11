@@ -40,9 +40,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 For more information visit https://opensource.org/licenses/MIT
 
-portfoliodesigner login ss.png
-
-portfoliodesigner search page ss.png
-
-portfoliodesigner update info ss.png
+![portfoliodesigner login ss](https://user-images.githubusercontent.com/104907412/189542508-38ae574b-a798-42f8-bbdd-d123a3994fe1.png)
+![portfoliodesigner search page ss](https://user-images.githubusercontent.com/104907412/189542509-a78cc9ae-293c-4690-9b67-a97bde65061d.png)
+![portfoliodesigner update info ss](https://user-images.githubusercontent.com/104907412/189542511-832acd07-360c-47dd-a943-ec4f988f1b8e.png)
 
