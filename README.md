@@ -7,9 +7,11 @@ The user can log in to Profile Designer & have all of their pinned repos appear 
 
 https://github.com/easmsm/portfolio-designer
 
-**Updated Repo Link**
+**Updated Repo Link & Heroku Link**
 
 https://github.com/eclevela-1234/portfolio-designer-2
+
+https://peaceful-reef-87519.herokuapp.com/login
 
 
 **Collaboration Credits**
