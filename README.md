@@ -4,23 +4,23 @@ Portfolio Designer is an interactive full stack application that loads and forma
 The user can log in to Profile Designer & have all of their pinned repos appear upon logging in & can even search for other users by using their GitHub profile name. 
 
 
-##Original Repo Link
+## Original Repo Link
 
 https://github.com/easmsm/portfolio-designer
 
-##Updated Repo Link & Heroku Link
+## Updated Repo Link & Heroku Link
 
 https://github.com/eclevela-1234/portfolio-designer-2
 
 https://peaceful-reef-87519.herokuapp.com/login
 
 
-##Collaboration Credits
+## Collaboration Credits
 
 Eliot Cleveland, Emily Kukwa, Taylor Johnson, Savannah Whittenburg, Daniel Chow
 
 
-##Contribution Guidelines
+## Contribution Guidelines
 
 *Those who wish to contribute may create issues and submit pull requests.*
 
