@@ -40,9 +40,5 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 For more information visit https://opensource.org/licenses/MIT
 
-portfoliodesigner login ss.png
 
-portfoliodesigner search page ss.png
-
-portfoliodesigner update info ss.png
 
