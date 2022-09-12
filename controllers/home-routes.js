@@ -6,7 +6,7 @@ const { Project, User } = require("../models");
 router.get("/", (req, res) => {
   console.log("======================");
   User.findAll({
-    attributes: ["username", "email"],
+    attributes: ["username", "email", "name", "social"],
     //   { exclude: ['password'] }],
     // include: [{ model: Project }],
   })
