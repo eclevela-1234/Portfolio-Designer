@@ -1,6 +1,6 @@
 <section>
 
-  <h2 class="has-text-weight-bold is-size-4">Update your info</h2>
+  <h2 class="title has-text-weight-bold is-size-4">Update your info</h2>
 
 
   <form class="new-post-form">
@@ -14,12 +14,13 @@
     </div>
 
     <button id="update type="submit" class="btn, button is-warning is-rounded">Update</button>
-
+    
 
   </form>
 </section>
 
-<section>
+{{!-- future feature --}}
+{{!-- <section>
   <h2>Current Pinned Repos</h2>
 <ul class="post-list">
   {{#each project.repos as |repo|}}
@@ -28,20 +29,6 @@
   </li>
   {{/each}}
 </ul>
-</section>
-
-{{!-- {{#if projects.length}}
-<section>
-  <h2 class="has-text-weight-bold is-size-4">Your Projects</h2>
-  <ol>
-    {{#each projects as |project|}}
-    <li>
-      {{> post-info project}}
-      <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>
-    </li>
-    {{/each}}
-  </ol>
-</section>
-{{/if}} --}}
+</section> --}}
 
 <script src="/javascript/dashboard.js"></script>

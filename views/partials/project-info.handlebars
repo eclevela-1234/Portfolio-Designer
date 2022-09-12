@@ -1,10 +1,15 @@
-<article class="post">
-  <div class="title">
-    <a href="{{link}}" target="_blank"> {{repo}} </a>
-    <span>({{link}})</span>
-  </div>
-  <p>{{description}}</p>
-  <div class="meta">
-    <div style="background-color: {{languageColor}};">Language: {{language}} </div>
-  </div>
+<article class="media">
+  <div>
+    <p class="">
+    <a class="is-size-4" href="{{link}}" target="_blank"> {{repo}} </a>
+  {{link}}
+</p>
+  <p><strong>{{description}}</strong></p>
+  <div class="m-2">
+    <a class="href="{{link}}" target="_blank">
+      <div class="button is-light" style="background-color: {{languageColor}};">
+        Language: {{language}}
+      </div>
+    </a>
+  </div>  </div>
 </article>
