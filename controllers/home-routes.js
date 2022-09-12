@@ -37,7 +37,8 @@ router.get("/:username", (req, res) => {
     where: {
       owner: req.params.username,
     },
-    // include: [{ model: Project }],
+    include: [{ model: User,
+    attributes: ["name", "bio", "social"] }],
   })
     .then((data) => {
       if (!data.length) {
@@ -45,7 +46,7 @@ router.get("/:username", (req, res) => {
       }
 
       const projects = data.map((project) => project.get({ plain: true }));
-      //   res.send(projects);
+        // res.send(projects);
       res.render("portfolio", { projects, loggedIn: req.session.loggedIn });
     })
     .catch((err) => {

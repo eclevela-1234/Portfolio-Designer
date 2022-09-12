@@ -1,13 +1,24 @@
-
-<img style="width: 200px" src="https://github.com/{{projects.[0].owner}}.png" alt="profile-img">
-
-<h2>{{projects.[0].owner}}</h2>
-
-<ol class="post-list">
+<div class="media">
+  <figure class="media-left">
+    <p class="image">
+      <img class="is-rounded" style="width: 200px" src="https://github.com/{{projects.[0].owner}}.png" alt="profile-img">
+    </p>
+  </figure>
+</div>
+<div class="media my-2">
+  <div class="media-content">
+    <div class="contents">
+      <h2 class="title mb-1"><strong>{{projects.[0].user.name}}</strong></h2>
+      <a href="{{projects.[0].user.social}}" target="_blank">{{projects.[0].user.social}}</a>
+      <p>{{projects.[0].user.bio}}</p>
+    </div>
+  </div>
+</div> 
+<ul class="block">
   
   {{#each projects as |project|}}
-  <li>
+  <li class="block">
     {{> project-info project }}
   </li>
   {{/each}}
-</ol>
+</ul>
