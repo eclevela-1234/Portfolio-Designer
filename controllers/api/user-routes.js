@@ -83,9 +83,7 @@ router.post("/logout", withAuth, (req, res) => {
 
 router.put("/update", withAuth, (req, res) => {
   console.log("Session Username: ", req.session.username)
-  User.update(
-
-   
+  User.update(  
     { bio: req.body.bio },
     {
       where: {
