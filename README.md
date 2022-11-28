@@ -1,4 +1,4 @@
-# portfolio-designer-2
+# Portfolio-Designer
 
 Portfolio Designer is an interactive full stack application that loads and formats your pinned repos as a portfolio. This project showcases the skills between each student in regards to handlebars, JavaScript, Schema.sql, and multiple other coding languages.
 The user can log in to Profile Designer & have all of their pinned repos appear upon logging in & can even search for other users by using their GitHub profile name. 
